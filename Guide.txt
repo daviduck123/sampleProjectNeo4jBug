@@ -1,0 +1,10 @@
+Using Spring Boot Starter 1.4.1.RELEASE
+Using neo4j 3.0.6
+Using SDN 4.1.3
+Using neo4j-ogm 2.0.5
+
+
+Setting password neo4j : sample
+
+Guide to repro can be seen at index.html
+Thank you
