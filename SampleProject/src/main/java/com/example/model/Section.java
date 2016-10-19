@@ -11,7 +11,7 @@ public class Section {
 
 	String id;
 
-	@Relationship(type = "HAS_LAH", direction = "OUTGOING")
+	@Relationship(type = "HAS_ENGINE", direction = "OUTGOING")
 	private Engine engine;
 
 	private String name;

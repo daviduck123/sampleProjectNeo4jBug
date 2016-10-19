@@ -13,7 +13,7 @@ public class LineItem {
 
 	String id;
 
-	@Relationship(type = "HAS_LAH", direction = "OUTGOING")
+	@Relationship(type = "HAS_ENGINE", direction = "OUTGOING")
 	private Engine engine;
 
 	@Relationship(type = "HAS_SECTION", direction = "OUTGOING")

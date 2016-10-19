@@ -13,7 +13,7 @@ public class Engine {
 
 	String id;
 
-	@Relationship(type = "HAS_WELL", direction = "OUTGOING")
+	@Relationship(type = "HAS_MACHINE", direction = "OUTGOING")
 	private Machine machine;
 
 	private String name;
@@ -21,24 +21,8 @@ public class Engine {
 	private Boolean active;
 
 	private Boolean isTracking;
-
-	private Boolean isCheckActivityDetail;
-
-	private Boolean isCheckActivityMilestone;
-
-	private Boolean isCheckDelimiter;
-
-	private Boolean isCheckNpt;
-
-	private Boolean isCheckNptStart;
-
-	private Boolean isCheckTopNpt;
-
-	private Boolean isCheckNptSummary;
-
+	
 	private Boolean lineEngineInactive;
-
-	private Boolean nptSummary;
 
 	private Boolean isTemporary;
 
@@ -54,14 +38,7 @@ public class Engine {
 		this.name = name;
 		this.active = false;
 		this.isTracking = false;
-		this.isCheckActivityDetail = false;
-		this.isCheckActivityMilestone = false;
-		this.isCheckNpt = true;
-		this.isCheckNptStart = true;
-		this.isCheckTopNpt = false;
-		this.isCheckNptSummary = false;
 		this.lineEngineInactive = false;
-		this.isCheckDelimiter = false;
 	}
 
 	public Long getGraphId() {
@@ -112,76 +89,12 @@ public class Engine {
 		this.isTracking = isTracking;
 	}
 
-	public Boolean getIsCheckActivityDetail() {
-		return isCheckActivityDetail;
-	}
-
-	public void setIsCheckActivityDetail(Boolean isCheckActivityDetail) {
-		this.isCheckActivityDetail = isCheckActivityDetail;
-	}
-
-	public Boolean getIsCheckActivityMilestone() {
-		return isCheckActivityMilestone;
-	}
-
-	public void setIsCheckActivityMilestone(Boolean isCheckActivityMilestone) {
-		this.isCheckActivityMilestone = isCheckActivityMilestone;
-	}
-
-	public Boolean getIsCheckDelimiter() {
-		return isCheckDelimiter;
-	}
-
-	public void setIsCheckDelimiter(Boolean isCheckDelimiter) {
-		this.isCheckDelimiter = isCheckDelimiter;
-	}
-
-	public Boolean getIsCheckNpt() {
-		return isCheckNpt;
-	}
-
-	public void setIsCheckNpt(Boolean isCheckNpt) {
-		this.isCheckNpt = isCheckNpt;
-	}
-
-	public Boolean getIsCheckNptStart() {
-		return isCheckNptStart;
-	}
-
-	public void setIsCheckNptStart(Boolean isCheckNptStart) {
-		this.isCheckNptStart = isCheckNptStart;
-	}
-
-	public Boolean getIsCheckTopNpt() {
-		return isCheckTopNpt;
-	}
-
-	public void setIsCheckTopNpt(Boolean isCheckTopNpt) {
-		this.isCheckTopNpt = isCheckTopNpt;
-	}
-
-	public Boolean getIsCheckNptSummary() {
-		return isCheckNptSummary;
-	}
-
-	public void setIsCheckNptSummary(Boolean isCheckNptSummary) {
-		this.isCheckNptSummary = isCheckNptSummary;
-	}
-
 	public Boolean getLineEngineInactive() {
 		return lineEngineInactive;
 	}
 
 	public void setLineEngineInactive(Boolean lineEngineInactive) {
 		this.lineEngineInactive = lineEngineInactive;
-	}
-
-	public Boolean getNptSummary() {
-		return nptSummary;
-	}
-
-	public void setNptSummary(Boolean nptSummary) {
-		this.nptSummary = nptSummary;
 	}
 
 	public Boolean getIsTemporary() {
@@ -203,11 +116,7 @@ public class Engine {
 	@Override
 	public String toString() {
 		return "Engine [graphId=" + graphId + ", id=" + id + ", machine=" + machine + ", name=" + name + ", active="
-				+ active + ", isTracking=" + isTracking + ", isCheckActivityDetail=" + isCheckActivityDetail
-				+ ", isCheckActivityMilestone=" + isCheckActivityMilestone + ", isCheckDelimiter=" + isCheckDelimiter
-				+ ", isCheckNpt=" + isCheckNpt + ", isCheckNptStart=" + isCheckNptStart + ", isCheckTopNpt="
-				+ isCheckTopNpt + ", isCheckNptSummary=" + isCheckNptSummary + ", lineEngineInactive=" + lineEngineInactive
-				+ ", nptSummary=" + nptSummary + ", isTemporary=" + isTemporary + ", lastModified=" + lastModified
-				+ "]";
+				+ active + ", isTracking=" + isTracking + ", lineEngineInactive=" + lineEngineInactive
+				+ ", isTemporary=" + isTemporary + ", lastModified=" + lastModified + "]";
 	}
 }
